@@ -4,9 +4,10 @@ services:
     image: postgres:17
     user: root
     environment:
-      - POSTGRES_USER=odoo
-      - POSTGRES_PASSWORD=odoo18@2024
-      - POSTGRES_DB=postgres
+      - DB_PORT_5432_TCP_ADDR=postgresql://xecohil:Chucam2022++@databases-rabinal-demrcq:5432/choltzij #Insert your Database Endpoint.
+      - POSTGRES_USER=xecohil
+      - POSTGRES_PASSWORD=Chucam2022++
+      - POSTGRES_DB=choltzij
     restart: always             # run as a service
     volumes:
         - ./postgresql:/var/lib/postgresql/data
