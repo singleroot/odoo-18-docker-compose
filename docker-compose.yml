@@ -4,6 +4,7 @@ services:
     image: postgres:17
     user: root
     environment:
+      - POSTGRES_HOST=databases-rabinal-demrcq
       - POSTGRES_USER=xecohil
       - POSTGRES_PASSWORD=Chucam2022++
       - POSTGRES_DB=choltzij
@@ -23,6 +24,7 @@ services:
     command: --
     environment:
       - HOST=databases-rabinal-demrcq
+      - PORT=5432
       - USER=xecohil
       - PASSWORD=Chucam2022++
       - PIP_BREAK_SYSTEM_PACKAGES=1
