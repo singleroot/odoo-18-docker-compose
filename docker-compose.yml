@@ -9,8 +9,8 @@ services:
       - POSTGRES_PASSWORD=Chucam2022++
       - POSTGRES_DB=choltzij
     restart: always             # run as a service
-    volumes:
-        #- ./postgresql:/var/lib/postgresql/data
+    #volumes:
+    #    #- ./postgresql:/var/lib/postgresql/data
 
   odoo18:
     image: odoo:18
