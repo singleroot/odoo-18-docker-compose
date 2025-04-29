@@ -4,7 +4,7 @@ services:
     image: postgres:17
     user: root
     environment:
-      - POSTGRES_HOST=databases-rabinal-0pituv
+      - POSTGRES_HOST=168.231.73.120
       - POSTGRES_USER=xecohil
       - POSTGRES_PASSWORD=Chucam2022++
       - POSTGRES_DB=choltzij
@@ -23,7 +23,7 @@ services:
     tty: true
     command: --
     environment:
-      - HOST=databases-rabinal-0pituv
+      - HOST=168.231.73.120
       - PORT=5432
       - USER=xecohil
       - PASSWORD=Chucam2022++
