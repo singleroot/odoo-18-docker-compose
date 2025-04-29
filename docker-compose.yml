@@ -23,7 +23,7 @@ services:
     tty: true
     command: --
     environment:
-      - HOST=databases-rabinal-demrcq
+      - HOST=databases-rabinal-0pituv
       - PORT=5432
       - USER=xecohil
       - PASSWORD=Chucam2022++
