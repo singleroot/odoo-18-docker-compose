@@ -4,7 +4,7 @@ services:
     image: postgres:17
     user: root
     environment:
-      - POSTGRES_HOST=databases-rabinal-demrcq
+      - POSTGRES_HOST=databases-rabinal-0pituv
       - POSTGRES_USER=xecohil
       - POSTGRES_PASSWORD=Chucam2022++
       - POSTGRES_DB=choltzij
