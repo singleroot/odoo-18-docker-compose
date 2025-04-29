@@ -4,7 +4,7 @@ services:
     image: postgres:17
     user: root
     environment:
-      - POSTGRES_HOST=databases-rabinal-demrcq
+      - POSTGRES_HOST=choltzijbackend-o89ybh-3f6b66-168-231-73-120.traefik.me
       - POSTGRES_USER=xecohil
       - POSTGRES_PASSWORD=Chucam2022++
       - POSTGRES_DB=choltzij
@@ -23,7 +23,7 @@ services:
     tty: true
     command: --
     environment:
-      - HOST=databases-rabinal-demrcq
+      - HOST=choltzijbackend-o89ybh-3f6b66-168-231-73-120.traefik.me
       - PORT=5432
       - USER=xecohil
       - PASSWORD=Chucam2022++
