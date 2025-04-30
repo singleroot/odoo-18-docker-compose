@@ -31,7 +31,13 @@ services:
       #- /etc/timezone:/etc/timezone:ro
       #- /etc/localtime:/etc/localtime:ro
       - ./entrypoint.sh:/entrypoint.sh
+      #- ./addons:/mnt/extra-addons
+      #- ./etc:/etc/odoo
+      - odoo-web-data:/var/lib/odoo
+      - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
-      - ./etc:/etc/odoo
     restart: always             # run as a service
+  volumes:
+  odoo-web-data:
+  odoo-db-data:
     
