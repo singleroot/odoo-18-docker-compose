@@ -21,7 +21,10 @@ if ! dpkg -l | grep -q logrotate; then
     apt-get update && apt-get install -y logrotate
 fi
 
-COPY --chmod=755 ./entrypoint.sh /entrypoint.sh
+
+cp --chmod=755 ./wait-for-psql.py /wait-for-psql.py
+
+chmod -R 775 /wait-for-psql.py
 # Copy logrotate config
 cp /etc/odoo/logrotate /etc/logrotate.d/odoo
 
