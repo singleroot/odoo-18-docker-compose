@@ -21,9 +21,9 @@ services:
     tty: true
     command: --
     environment:
-      - HOST=db
-      - USER=odoo
-      - PASSWORD=odoo18@2024
+      - HOST=168.231.73.120
+      - USER=xecohil
+      - PASSWORD=Chucam2022++
       - PIP_BREAK_SYSTEM_PACKAGES=1
     volumes:
       #- /etc/timezone:/etc/timezone:ro
