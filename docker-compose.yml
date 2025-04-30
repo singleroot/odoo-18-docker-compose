@@ -8,7 +8,7 @@ services:
       - POSTGRES_DB=choltzij
     restart: always             # run as a service
     volumes:
-        - odoo-db-data:/var/lib/postgresql/data
+        - ./postgresql:/var/lib/postgresql/data
 
   odoo18:
     image: odoo:18
@@ -21,23 +21,14 @@ services:
     tty: true
     command: --
     environment:
-      - HOST=168.231.73.120
-      - PORT=5432
-      - USER=xecohil
-      - PASSWORD=Chucam2022++
-      - DB=choltzij
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=odoo18@2024
       - PIP_BREAK_SYSTEM_PACKAGES=1
     volumes:
       #- /etc/timezone:/etc/timezone:ro
       #- /etc/localtime:/etc/localtime:ro
       - ./entrypoint.sh:/entrypoint.sh
-      #- ./addons:/mnt/extra-addons
-      #- ./etc:/etc/odoo
-      - odoo-web-data:/var/lib/odoo
-      - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
+      - ./etc:/etc/odoo
     restart: always             # run as a service
-  volumes:
-  odoo-web-data:
-  odoo-db-data:
-    
