@@ -21,11 +21,11 @@ services:
     tty: true
     command: --
     environment:
-      - DB_HOST=168.231.73.120
-      - DB_PORT=5432
-      - DB_USER=xecohil
-      - DB_PASSWORD=Chucam2022++
-      - DB_DATABASE=odoo
+      - DB_PORT_5432_TCP_ADDR=168.231.73.120
+      - DB_PORT_5432_TCP_PORT=5432
+      - DB_ENV_POSTGRES_USER=xecohil
+      - DB_ENV_POSTGRES_DATABASE=Chucam2022++
+      - DB_ENV_POSTGRES_PASSWORD=odoo
       - PIP_BREAK_SYSTEM_PACKAGES=1
       #- HOST=168.231.73.120
       #- USER=xecohil
