@@ -21,10 +21,17 @@ services:
     tty: true
     command: --
     environment:
-      - HOST=168.231.73.120
-      - USER=xecohil
-      - PASSWORD=Chucam2022++
+      - DB_HOST=168.231.73.120
+      - DB_PORT=5432
+      - DB_USER=xecohil
+      - DB_PASSWORD=Chucam2022++
+      - DB_DATABASE=odoo
       - PIP_BREAK_SYSTEM_PACKAGES=1
+      #- HOST=168.231.73.120
+      #- USER=xecohil
+      #- PASSWORD=Chucam2022++
+      #- PIP_BREAK_SYSTEM_PACKAGES=1
+      #- DATABASE=Chucam2022++
     volumes:
       #- /etc/timezone:/etc/timezone:ro
       #- /etc/localtime:/etc/localtime:ro
