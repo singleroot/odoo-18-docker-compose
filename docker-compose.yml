@@ -39,4 +39,19 @@ services:
       - ./wait-for-psql.py:/wait-for-psql.py
       - ./addons:/mnt/extra-addons
       - ./etc:/etc/odoo
+    networks:
+      - choltzij-backend-dfidru
+    labels:
+      - traefik.http.routers.choltzij-backend-dfidru-8-web.rule=Host(`choltzij-odoo-d039d4-168-231-73-120.traefik.me`)
+      - traefik.http.routers.choltzij-backend-dfidru-8-web.entrypoints=odoo18
+      - traefik.http.services.choltzij-backend-dfidru-8-web.loadbalancer.server.port=10018
+      - traefik.http.routers.choltzij-backend-dfidru-8-web.service=choltzij-backend-dfidru-8-web
+      - traefik.enable=true
     restart: always             # run as a service
+volumes:
+  odoo-web-data-choltzij-backend-dfidru: null
+  odoo-db-data-choltzij-backend-dfidru: null
+networks:
+  choltzij-backend-dfidru:
+    name: choltzij-backend-dfidru
+    external: true
