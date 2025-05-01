@@ -43,18 +43,18 @@ services:
       #- /mnt/user/appdata/odoo/config:/etc/odoo:rw
       #- /mnt/user/appdata/odoo/addons:/mnt/extra-addons:rw
     networks:
-      - choltzij-backend-dfidru_default
+      - choltzij-backend-dspsdd_default
     labels:
-      - traefik.http.routers.choltzij-backend-dfidru_default-web.rule=Host(`choltzij-odoo-d039d4-168-231-73-120.traefik.me`)
-      - traefik.http.routers.choltzij-backend-dfidru_default-8-web.entrypoints=odoo18
-      - traefik.http.services.choltzij-backend-dfidru_default-8-web.loadbalancer.server.port=10018
-      - traefik.http.routers.choltzij-backend-dfidru_default-8-web.service=choltzij-backend-dfidru_default-8-web
+      - traefik.http.routers.choltzij-backend-dspsdd_default-web.rule=Host(`choltzij-odoo-d039d4-168-231-73-120.traefik.me`)
+      - traefik.http.routers.choltzij-backend-dspsdd_default-8-web.entrypoints=odoo18
+      - traefik.http.services.choltzij-backend-dspsdd_default-8-web.loadbalancer.server.port=10018
+      - traefik.http.routers.choltzij-backend-dspsdd_default-8-web.service=choltzij-backend-dspsdd_default-8-web
       - traefik.enable=true
     restart: always             # run as a service
 volumes:
-  odoo-web-data-choltzij-backend-dfidru_default: null
-  odoo-db-data-choltzij-backend-dfidru_default: null
+  odoo-web-data-choltzij-backend-dspsdd_default: null
+  odoo-db-data-choltzij-backend-dspsdd_default: null
 networks:
-  choltzij-backend-dfidru_default:
-    name: choltzij-backend-dfidru_default
+  choltzij-backend-dspsdd_default:
+    name: choltzij-backend-dspsdd_default
     external: true
