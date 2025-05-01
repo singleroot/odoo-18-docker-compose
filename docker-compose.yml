@@ -38,7 +38,7 @@ services:
       - ./entrypoint.sh:/entrypoint.sh
       - ./wait-for-psql.py:/wait-for-psql.py
       #- ./addons:/mnt/extra-addons
-      #- ./etc:/etc/odoo
+      - ./etc:/etc/odoo:rw
       - /mnt/user/appdata/odoo/data:/var/lib/odoo:rw
       - /mnt/user/appdata/odoo/config:/etc/odoo:rw
       - /mnt/user/appdata/odoo/addons:/mnt/extra-addons:rw
