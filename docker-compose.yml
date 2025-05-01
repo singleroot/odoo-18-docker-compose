@@ -39,9 +39,9 @@ services:
       - ./wait-for-psql.py:/wait-for-psql.py
       - ./addons:/mnt/extra-addons:rw
       - ./etc:/etc/odoo:rw
-      - /mnt/user/appdata/odoo/data:/var/lib/odoo:rw
-      - /mnt/user/appdata/odoo/config:/etc/odoo:rw
-      - /mnt/user/appdata/odoo/addons:/mnt/extra-addons:rw
+      #- /mnt/user/appdata/odoo/data:/var/lib/odoo:rw
+      #- /mnt/user/appdata/odoo/config:/etc/odoo:rw
+      #- /mnt/user/appdata/odoo/addons:/mnt/extra-addons:rw
     networks:
       - choltzij-backend-dfidru_default
     labels:
